@@ -1,7 +1,11 @@
 function addItem(){
-
+  var input = document.getElementById("newItem").value;
+  var list = document.getElementById("listDisplay");
+  var item = document.createElement("li");
+  var itemName = document.createTextNode(input);
+  item.appendChild(itemName);
+  list.appendChild(item);
 }
-
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
